@@ -6,32 +6,121 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>面試考題-前端工程師</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header></header>
+
+	<header>
+		<div class="container">
+			<div class="row">
+				<h1 class="logo">LOGO</h1>
+				<div id="menuIcon" class="menuIcon"><span></span></div>
+				<ul class="nav" id="menu">
+					<li class="nav-item">
+						<span class="navNum">01</span>文字文字
+						<span class="navArrow"></span>
+					</li>
+					<li class="nav-item">
+						<span class="navNum">02</span>文字文字
+						<span class="navArrow"></span>
+					</li>
+					<li class="nav-item">
+						<span class="navNum">03</span>文字文字
+						<span class="navArrow"></span>
+					</li>
+					<li class="nav-item">
+						<span class="navNum">04</span>文字文字
+						<span class="navArrow"></span>
+					</li>
+					<li class="nav-item">
+						<span class="navNum">Test</span>文字文字
+					</li>
+					<li class="nav-item">
+						<span class="navNum"><img src="./images/homeIcon.png" style="width:18px; height:14px;"></span>回首頁
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div id="lineIcon"></div>
+
 	<div class="wrapper">
-		<div class="container-fluid">
-			<ul class="nav">
-				<li class="nav-item">
-					<span>01</span>文字文字
-				</li>
-				<li class="nav-item">
-					<span>02</span>文字文字
-				</li>
-				<li class="nav-item">
-					<span>03</span>文字文字
-				</li>
-				<li class="nav-item">
-					<span>04</span>文字文字
-				</li>
-				li class="nav-item">
-					<span>Test</span>文字文字
-				</li>
-			</ul>
+		<div class="container mainProds01">
+			<div class="row-fluid">
+				<div class="centerBlock col-xs-12">
+					<p>
+						<span class="highlight">文字文字</span><br/>
+						文字文字 文字文字
+					</p>
+					<span class="moreIcon"></span>
+				</div>
+				<div class="col-lg-6 col-xs-12 itemBlock">
+					<p>
+						<span class="highlight">文字文字</span><br/>
+						文字文字 文字文字
+					</p>
+				</div>
+				<div class="col-lg-6 col-xs-12 itemBlock">
+						<p>
+							<span class="highlight">文字文字</span><br/>
+							文字文字 文字文字
+						</p>
+				</div>
+				<div class="col-lg-6 col-xs-12 itemBlock">
+						<p>
+							<span class="highlight">文字文字</span><br/>
+							文字文字 文字文字
+						</p>
+				</div>
+				<div class="col-lg-6 col-xs-12 itemBlock">
+						<p>
+							<span class="highlight">文字文字</span><br/>
+							文字文字 文字文字
+						</p>
+				</div>
+			</div>
 		</div>
 	</div>
-	<footer></footer>
+
+	<footer>
+		<div class="container-fluid">
+			<div class="row">
+				<p class="title">文字文字文字文字</p>
+				<p>
+					<span class="block">地址文字文字文字文字</span>
+					<span>客服專線：
+						<span class="block red">(02)000-0000</span>
+						<span class="block red">www.google.com</span>
+					</span>
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		$(function(){
+
+			$("#menuIcon").on("click",function(event){
+				var _this = $(this);
+				if(_this.hasClass("active")){
+					_this.removeClass("active");
+					$("#menu").slideUp(300);
+				}else{
+					_this.addClass("active");
+					$("#menu").slideDown(300);
+				};
+			});
+
+			$(window).resize(function(event){
+				if($(window).width()>768){
+					$("#menuIcon").removeClass("active");
+					$("#menu").show();
+				}
+			});
+
+		});
+	</script>
+
 </body>
 </html>
